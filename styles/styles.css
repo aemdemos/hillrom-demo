@@ -24,8 +24,8 @@
   --light-gray: #eee;
 
   /* fonts */
-  --body-font-family: ff-real-text-pro, "Helvetica Neue", Helvetica, Arial, sans-serif, sans-serif;
-  --heading-font-family: ff-real-headline-pro, "Helvetica Neue", Helvetica, Arial, sans-serif, sans-serif;
+  --body-font-family: ff-real-text-pro, "Helvetica Neue", helvetica, arial, sans-serif, sans-serif;
+  --heading-font-family: ff-real-headline-pro, "Helvetica Neue", helvetica, arial, sans-serif, sans-serif;
 
   /* body sizes */
   --body-font-size-m: 14px;
@@ -177,7 +177,6 @@ button {
   border: 2px solid #fff;
   border-radius: 3rem !important;
   color: #fff;
-  font-family: ff-real-text-pro, Helvetica Neue, Helvetica, Arial, sans-serif, sans-serif;
   font-size: 18px;
   font-size: 1.125rem;
   font-weight: 500;
@@ -200,13 +199,28 @@ button:focus {
   cursor: pointer;
 }
 
+a.button::after {
+  content: ' ';
+  border-width: 0 3.5px 3.5px 0;
+  display: inline-block;
+  padding: 3.5px;
+  border-style: solid;
+  border-color: currentcolor;
+  transition: transform .2s cubic-bezier(0,-2,0,3), -webkit-transform .2s cubic-bezier(0,-2,0,3);
+  margin-left: .5em;
+  margin-top: -0.1rem;
+  vertical-align: middle;
+  will-change: transform;
+  transform: rotate(-45deg) translateX(0);  
+}
+
 a.button:hover::after {
   content: " ";
   border-width: 0 3.5px 3.5px 0;
   display: inline-block;
   padding: 3.5px;
   border-style: solid;
-  border-color: currentColor;
+  border-color: currentcolor;
   transition: transform .2s cubic-bezier(0,-2,0,3), -webkit-transform .2s cubic-bezier(0,-2,0,3);
   margin-left: .5em;
   margin-top: -0.1rem;
@@ -236,24 +250,6 @@ button.secondary {
   min-width: 19rem;
 }
 
-a.button::after {
-  content: ' ';
-  border-width: 0 3.5px 3.5px 0;
-  display: inline-block;
-  padding: 3.5px;
-  padding-top: 3.5px;
-  padding-right: 3.5px;
-  padding-bottom: 3.5px;
-  padding-left: 3.5px;
-  border-style: solid;
-  border-color: currentColor;
-  transition: transform .2s cubic-bezier(0,-2,0,3), -webkit-transform .2s cubic-bezier(0,-2,0,3);
-  margin-left: .5em;
-  margin-top: -0.1rem;
-  vertical-align: middle;
-  will-change: transform;
-  transform: rotate(-45deg) translateX(0);  
-}
 main img {
   max-width: 100%;
   width: auto;
@@ -274,7 +270,7 @@ main img {
 /* sections */
 main > .section {
   margin: 0 auto;
-  padding: 35px 35px;
+  padding: 35px;
 }
 
 main > .section > div {
