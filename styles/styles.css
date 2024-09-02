@@ -84,6 +84,7 @@ body {
   font-size: var(--body-font-size-m);
   line-height: 1.6;
   max-width: 1680px;
+  font-variant-numeric: lining-nums;
 }
 
 body.appear {
@@ -346,5 +347,14 @@ main .section.highlight {
 
   .section.dark-blue .default-content-wrapper p {
     width: 304px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom:44px;
   }
 }
