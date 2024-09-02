@@ -190,7 +190,7 @@ button {
   line-height: 1.2;
   letter-spacing: normal;
   max-width: 20.5625rem;
-  min-width: 11.375rem;
+  /* min-width: 11.375rem; */
   text-transform: capitalize;
   text-decoration: none;
   padding: 0 12px;
