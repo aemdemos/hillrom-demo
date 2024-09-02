@@ -28,6 +28,7 @@
   --heading-font-family: ff-real-headline-pro, "Helvetica Neue", helvetica, arial, sans-serif, sans-serif;
 
   /* body sizes */
+  --body-font-size-l: 18px;
   --body-font-size-m: 14px;
   --body-font-size-s: 12px;
   --body-font-size-xs: 10px;
@@ -41,7 +42,7 @@
   --heading-font-size-xs: 14px;
 
   /* nav height */
-  --nav-height: 64px;
+  --nav-height: 120px;
 }
 
 /* fallback fonts */
