@@ -91,7 +91,8 @@ header nav .nav-corp-banner ul {
 }
 
 header nav .nav-corp-banner a {
-  font-weight: 300;
+  /* font-weight: 300; */
+  letter-spacing: .25px;
   color: #54585a;
 }
 
@@ -232,6 +233,7 @@ header nav .nav-sections ul {
 }
 
 header nav .nav-sections ul > li {
+  font-family: var(--heading-font-family);
   font-size: var(--body-font-size-l);
   font-weight: 300;
 }
