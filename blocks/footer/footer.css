@@ -1,6 +1,21 @@
 footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+  background-color: var(--dark-gray);
+  font-size: var(--body-font-size-m);
+  color: var(--background-color);
+}
+
+footer a:any-link {
+  /* font-weight: 700; */
+  color: var(--background-color);
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul > li {
+  padding-bottom: 16px;
 }
 
 footer .footer > div {
