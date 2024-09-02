@@ -76,12 +76,13 @@
 
 body {
   display: none;
-  margin: 0;
+  margin: auto;
   background-color: var(--background-color);
   color: var(--text-color);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
   line-height: 1.6;
+  max-width: 1680px;
 }
 
 body.appear {
@@ -144,6 +145,10 @@ pre {
   background-color: var(--light-color);
   overflow-x: auto;
   white-space: pre;
+}
+
+main {
+  padding: 0;
 }
 
 main > div {
@@ -274,8 +279,8 @@ main > .section {
 }
 
 main > .section > div {
-  max-width: 1200px;
-  margin: auto;
+  max-width: 1680px;
+  /* margin: auto; */
   padding: 0 24px;
 }
 
