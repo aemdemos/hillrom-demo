@@ -1,19 +1,44 @@
-.hero-container .hero-wrapper {
+main > .section.hero-container {
   max-width: unset;
+  padding: 0;
+}
+
+.hero > div {
+  padding-left: 24px;
+  padding-top: 88px;
+}
+
+main > .section > div {
   padding: 0;
 }
 
 .hero {
   position: relative;
-  padding: 40px 24px;
-  min-height: 300px;
+  padding: 0 auto;
+  min-height: 434px;
+  color: var(--background-color);
+}
+
+.hero p:has(picture) {
+  margin: 0;
+}
+
+.hero p:not(picture) {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  width: 70%;
+  margin: 0;
+  letter-spacing: .4px;
 }
 
 .hero h1 {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--background-color);
+  font-size: 32px;
+  letter-spacing: 2.5px;
+  line-height: 40px;
+  margin: 0;
+  padding-top: 4px;
+  padding-bottom: 14px;
 }
 
 .hero picture {
@@ -30,8 +55,47 @@
   height: 100%;
 }
 
-@media (width >= 900px) {
+@media (width >= 1024px) {  
+  .hero h1 {
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: 1.5px;
+    padding-top: 12px;
+    padding-bottom: 8px;
+  }
+
+  .hero p:not(picture) {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    width: 80%;
+  }
+
+  .hero > div {
+    width: 75%;
+    padding-left: 115px;
+    padding-top: 115px;
+  }
+}
+
+@media (width >= 1200px) {  
   .hero {
-    padding: 40px 32px;
+    min-height: 624px;
+  }
+
+  .hero h1 {
+    font-size: 88px;
+    letter-spacing: 3px;
+    line-height: 96px;
+  }
+
+  .hero p:not(picture) {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.25px;
+  }
+
+  .hero > div {
+    padding-left: 134px;
   }
 }
