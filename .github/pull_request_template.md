@@ -3,5 +3,5 @@ Please always provide the [GitHub issue(s)](../issues) your PR is for, as well a
 Fix #<gh-issue-id>
 
 Test URLs:
-- Before: https://main--hillrom-demo--aemdemos.hlx.live/
-- After: https://<branch>--hillrom-demo--aemdemos.hlx.live/
+- Before: https://main--hillrom-demo--aemdemos.aem.live/
+- After: https://<branch>--hillrom-demo--aemdemos.aem.live/
