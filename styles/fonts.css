@@ -1,6 +1,8 @@
 /* stylelint-disable max-line-length */
 @import url("https://p.typekit.net/p.css?s=1&k=izp2hec&ht=tk&f=26425.26432.35616.35620.26438.26439.26445.35629.35630.35633&a=141409005&app=typekit&e=css");
 
+/* customer fonts are downloaded from typekit for now */
+
 @font-face {
   font-family: ff-real-headline-pro;
   src: url("https://use.typekit.net/af/088842/00000000000000003b9b0804/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/088842/00000000000000003b9b0804/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/088842/00000000000000003b9b0804/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
