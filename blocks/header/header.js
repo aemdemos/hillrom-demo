@@ -146,6 +146,68 @@ export default async function decorate(block) {
     });
   }
 
+  nav.querySelectorAll('.section.menu').forEach((menu) => {
+    if (menu.nextElementSibling?.classList.contains('quick-links')) {
+      menu.firstElementChild.append(menu.nextElementSibling);
+    }
+
+    menu.querySelectorAll(':scope ul').forEach((list) => {
+      const target = list.closest('div');
+
+      const subMenusEl = document.createElement('div');
+      subMenusEl.classList.add('sub-menus');
+      target.append(subMenusEl);
+
+      list.querySelectorAll(':scope > li').forEach((subList, idx) => {
+        const subMenuEl = subList.querySelector(':scope > ul');
+        if (subMenuEl) {
+          const subMenu = document.createElement('div');
+          subList.dataset.subMenuIndex = idx;
+          subMenu.classList.add('sub-menu');
+          subMenu.setAttribute('data-sub-menu-index', idx);
+          subMenu.append(subMenuEl);
+          subMenusEl.append(subMenu);
+
+          subList.querySelector('a')?.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            const li = e.target.closest('li');
+            if (li) {
+              const { subMenuIndex } = li.dataset;
+              e.target.closest('.section.menu').querySelectorAll('.sub-menu').forEach((subMenuTarget) => {
+                if (subMenuTarget.dataset.subMenuIndex !== subMenuIndex) {
+                  subMenuTarget.setAttribute('aria-expanded', 'false');
+                } else {
+                  subMenuTarget.setAttribute('aria-expanded', 'true');
+                }
+              });
+            }
+          });
+        }
+      });
+    });
+  });
+
+  nav.querySelectorAll('.nav-sections li').forEach((sec, idx) => {
+    sec.setAttribute('data-menu-index', idx);
+
+    sec.addEventListener('click', (e) => {
+      const target = e.target.closest('li');
+      const targetIndex = target.getAttribute('data-menu-index');
+      // const targetSection = navSections.querySelector(`[data-menu-index="${targetIndex}"]`);
+      // const expanded = targetSection.getAttribute('aria-expanded') === 'true';
+
+      target.closest('nav').querySelectorAll('.section.menu').forEach((section, mIdx) => {
+        if (mIdx === parseInt(targetIndex, 10)) {
+          section.classList.toggle('hidden');
+          // section.classList.to('hidden');
+        } else {
+          section.classList.add('hidden');
+        }
+      });
+    });
+  });
+
   // hamburger for mobile
   const hamburger = document.createElement('div');
   hamburger.classList.add('nav-hamburger');
