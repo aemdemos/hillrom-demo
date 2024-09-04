@@ -338,10 +338,14 @@ main .section.highlight {
     padding: 0 32px;
   }
 
+  .section.dark-blue {
+    padding-left: 122px;
+  }
+
   .section.dark-blue .default-content-wrapper {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 120px;
   }
 
   .section.dark-blue .default-content-wrapper p {
